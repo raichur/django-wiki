@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+SETTINGS_PATH = os.path.dirname(__file__)
+PROJECT_PATH = os.path.join(SETTINGS_PATH, os.pardir)
+PROJECT_PATH = os.path.abspath(PROJECT_PATH)
+TEMPLATES_PATH = os.path.join(PROJECT_PATH, "templates")
 
 
 # Quick-start development settings - unsuitable for production
@@ -50,6 +54,10 @@ MIDDLEWARE_CLASSES = (
 )
 
 ROOT_URLCONF = 'wiki.urls'
+
+TEMPLATE_DIRS = (
+    TEMPLATES_PATH,
+)
 
 WSGI_APPLICATION = 'wiki.wsgi.application'
 
