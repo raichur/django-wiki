@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica Neue;
+}
+a {
+  text-decoration: none;
+  color: #1d1d1d;
+}
+nav li {
+  display: inline-block;
+  margin: 10px;
+}
+nav {
+  margin: 10px auto;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.content {
+  margin: 0 auto;
+  width: 70%;
+}
+.content article {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.content article h1 {
+  font-size: 3rem;
+}
+.content article h2 {
+  font-size: 2rem;
+}

@@ -15,7 +15,8 @@ SETTINGS_PATH = os.path.dirname(__file__)
 PROJECT_PATH = os.path.join(SETTINGS_PATH, os.pardir)
 PROJECT_PATH = os.path.abspath(PROJECT_PATH)
 TEMPLATES_PATH = os.path.join(PROJECT_PATH, "templates")
-
+ARTICLE_TEMPLATE_PATH = os.path.join(PROJECT_PATH, "articles/templates")
+STATIC_FILES_PATH = os.path.join(PROJECT_PATH, "static")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -57,6 +58,7 @@ ROOT_URLCONF = 'wiki.urls'
 
 TEMPLATE_DIRS = (
     TEMPLATES_PATH,
+    ARTICLE_TEMPLATE_PATH,
 )
 
 WSGI_APPLICATION = 'wiki.wsgi.application'
@@ -88,5 +90,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
-
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    ('assets', STATIC_FILES_PATH),
+)

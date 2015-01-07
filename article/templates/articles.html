@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if articles.count > 0 %}
+{% for article in articles %}
+<article>
+  <h2><a href="/articles/get/{{article.id}}/">{{article.title}}</a></h2>
+  <p>{{article.body|truncatewords:"10"}}</p>
+</article>
+{% endfor %}
+{% else %}
+<p>No posts yet.</p>
+{% endif %}
+{% endblock %}

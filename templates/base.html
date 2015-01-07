@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+  <head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static "assets/css/style.css" %}">
+  </head>
+  <body>
+    <nav>
+      {% block sidebar %}
+      <ul>
+        <li><a href="/articles/all">Articles</a></li>
+        <li><a href="/admin/">Admin</a></li>
+      </ul>
+      {% endblock %}
+    </nav>
+    <section class="content">
+      {% block content %}
+
+      {% endblock %}
+    </section>
+  </body>
+</html>
