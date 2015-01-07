@@ -26,6 +26,7 @@ nav {
 }
 .content article h1 {
   font-size: 3rem;
+  margin-bottom: 10px;
 }
 .content article h2 {
   font-size: 2rem;
